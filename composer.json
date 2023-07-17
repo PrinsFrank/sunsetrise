@@ -5,12 +5,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "PrinsFrank\\SunsetRise\\": "src/"
+            "PrinsFrank\\SunSetRise\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PrinsFrank\\SunsetRise\\Tests\\": "tests/"
+            "PrinsFrank\\SunSetRise\\Tests\\": "tests/"
         }
     },
     "require": {
