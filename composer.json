@@ -1,0 +1,17 @@
+{
+    "name": "prinsfrank/sunsetrise",
+    "description": "Calculate times for Sunset, Sunrise, Nautical twilight, Civil twilight etc for any place and time",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PrinsFrank\\SunsetSunrise\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PrinsFrank\\SunsetSunrise\\Tests\\": "tests/"
+        }
+    },
+    "require": {}
+}
