@@ -10,8 +10,10 @@ use RuntimeException;
 class JulianDay
 {
     private const SECONDS_IN_DAY = 60 * 60 * 24;
+
     /** Julian day starts at 12:00 */
     private const OFFSET_JULLIAN_DAY = -0.5;
+
     private const TT_LAG_IN_SECONDS = 69.184;
 
     public static function absoluteForDate(DateTimeImmutable $dateTime): float
