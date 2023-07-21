@@ -9,9 +9,11 @@ class HourAngle
 {
     private const CORRECTION_REFRACTION_SOLAR_DISC = -0.83;
 
-    public static function sinForPositionAndSunDeclination(Position $position, float $sunDeclination): float
+    public static function forPositionAndSunDeclination(Position $position, float $sunDeclination): float
     {
-        return (sin(self::CORRECTION_REFRACTION_SOLAR_DISC) - sin($position->latitude) - sin($sunDeclination))
-            / (cos($position->latitude) * cos($sunDeclination));
+        return acos(
+            (sin(self::CORRECTION_REFRACTION_SOLAR_DISC) - sin($position->latitude) - sin($sunDeclination))
+            / (cos($position->latitude) * cos($sunDeclination))
+        );
     }
 }
