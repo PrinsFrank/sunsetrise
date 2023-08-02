@@ -26,6 +26,11 @@ class JulianDay
         return $julianDay + self::OFFSET_JULLIAN_DAY + ($dateTime->getTimestamp() % self::SECONDS_IN_DAY) / self::SECONDS_IN_DAY;
     }
 
+    public static function toDateTimeImmutable(float $julianDay): DateTimeImmutable
+    {
+        return new DateTimeImmutable('@' . (($julianDay - 2440587.5) * 86400));
+    }
+
     public static function tTDaysSinceJan1st2000ForDate(DateTimeImmutable $dateTimeImmutable): float
     {
         return self::absoluteForDate($dateTimeImmutable)
