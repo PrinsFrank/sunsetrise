@@ -33,6 +33,19 @@ class JulianDayTest extends TestCase
     }
 
     /**
+     * @covers ::toDateTimeImmutable
+     */
+    public function testToDateTimeImmutable(): void
+    {
+        $UTC = new \DateTimeZone('UTC');
+        static::assertEquals(new DateTimeImmutable('2000-01-01', $UTC), JulianDay::toDateTimeImmutable(2451544.5));
+        static::assertEquals(new DateTimeImmutable('2000-01-01 12:00', $UTC),  JulianDay::toDateTimeImmutable(2451545.0));
+        static::assertEquals(new DateTimeImmutable('2004-05-19 00:00', $UTC),  JulianDay::toDateTimeImmutable(2453144.5));
+        static::assertEquals(new DateTimeImmutable('2023-07-20', $UTC),  JulianDay::toDateTimeImmutable(2460145.5));
+        static::assertEquals(new DateTimeImmutable('2023-07-20 12:00', $UTC),  JulianDay::toDateTimeImmutable(2460146.0));
+    }
+
+    /**
      * @covers ::tTDaysSinceJan1st2000ForDate
      */
     public function testTTDaysSinceJan1st2000ForDate(): void

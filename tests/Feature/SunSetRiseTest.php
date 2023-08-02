@@ -11,7 +11,7 @@ use PrinsFrank\SunSetRise\Equations\HourAngle;
 use PrinsFrank\SunSetRise\Equations\JulianDay;
 use PrinsFrank\SunSetRise\Equations\MeanSolarTime;
 use PrinsFrank\SunSetRise\Equations\SolarDeclination;
-use PrinsFrank\SunSetRise\Equations\SolarMeanAnomaly;
+use PrinsFrank\SunSetRise\Equations\MeanAnomaly;
 use PrinsFrank\SunSetRise\Equations\SolarTransit;
 use PrinsFrank\SunSetRise\Equations\Sunrise;
 use PrinsFrank\SunSetRise\Equations\Sunset;
@@ -24,7 +24,7 @@ class SunSetRiseTest extends TestCase
         $position = new Position(41.0082, 28.9784);
         $dateTime = new DateTimeImmutable('2023-07-20 00:00');
         $meanSolarTime = MeanSolarTime::forTimeAndPosition($dateTime, $position);
-        $solarMeanAnomaly = SolarMeanAnomaly::forMeanSolarTime($meanSolarTime);
+        $solarMeanAnomaly = MeanAnomaly::forMeanSolarTime($meanSolarTime);
         $equationOfTheCenter = EquationOfTheCenter::forSolarMeanAnomaly($solarMeanAnomaly);
         $eclipticLongitude = EclipticLongitude::forSolarMeanAnomalyAndEquationOfTheCenter($solarMeanAnomaly, $equationOfTheCenter);
         $solarTransit = SolarTransit::calculate($meanSolarTime, $solarMeanAnomaly, $eclipticLongitude);
