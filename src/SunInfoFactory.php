@@ -1,10 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace PrinsFrank\SunSetRise\SunInfo;
+namespace PrinsFrank\SunSetRise;
 
 use DateTimeImmutable;
-use PrinsFrank\SunSetRise\Position;
 use PrinsFrank\SunSetRise\Support\DateSunInfoKey;
 
 class SunInfoFactory

@@ -6,11 +6,11 @@ namespace PrinsFrank\SunSetRise\Tests\Unit\SunInfoDate;
 use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;
 use PrinsFrank\SunSetRise\Position;
-use PrinsFrank\SunSetRise\SunInfo\SunInfo;
-use PrinsFrank\SunSetRise\SunInfo\SunInfoFactory;
+use PrinsFrank\SunSetRise\SunInfo;
+use PrinsFrank\SunSetRise\SunInfoFactory;
 
 /**
- * @coversDefaultClass \PrinsFrank\SunSetRise\SunInfo\SunInfoFactory
+ * @coversDefaultClass \PrinsFrank\SunSetRise\SunInfoFactory
  */
 class SunInfoFactoryTest extends TestCase
 {

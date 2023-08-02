@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PrinsFrank\SunSetRise\SunInfo\Period;
+namespace PrinsFrank\SunSetRise\Period;
 
 use DateTimeImmutable;
 
