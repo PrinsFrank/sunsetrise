@@ -20,12 +20,14 @@ class JulianDayTest extends TestCase
         $UTC = new \DateTimeZone('UTC');
         static::assertSame(2451544.5, JulianDay::absoluteForDate(new DateTimeImmutable('2000-01-01', $UTC)));
         static::assertSame(2451545.0, JulianDay::absoluteForDate(new DateTimeImmutable('2000-01-01 12:00', $UTC)));
+        static::assertSame(2453144.5, JulianDay::absoluteForDate(new DateTimeImmutable('2004-05-19 00:00', $UTC)));
         static::assertSame(2460145.5, JulianDay::absoluteForDate(new DateTimeImmutable('2023-07-20', $UTC)));
         static::assertSame(2460146.0, JulianDay::absoluteForDate(new DateTimeImmutable('2023-07-20 12:00', $UTC)));
 
         $other = new \DateTimeZone('Etc/GMT+12');
         static::assertSame(2451545.0, JulianDay::absoluteForDate(new DateTimeImmutable('2000-01-01', $other)));
         static::assertSame(2451545.5, JulianDay::absoluteForDate(new DateTimeImmutable('2000-01-01 12:00', $other)));
+        static::assertSame(2453144.5, JulianDay::absoluteForDate(new DateTimeImmutable('2004-05-18 12:00', $other)));
         static::assertSame(2460146.0, JulianDay::absoluteForDate(new DateTimeImmutable('2023-07-20', $other)));
         static::assertSame(2460146.5, JulianDay::absoluteForDate(new DateTimeImmutable('2023-07-20 12:00', $other)));
     }
