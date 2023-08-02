@@ -52,7 +52,7 @@ class PositionTest extends TestCase
     /**
      * @covers ::__construct()
      */
-    public function testConstructValidLatitudeLongiture(): void
+    public function testConstructValidLatitudeLongitude(): void
     {
         $position = new Position(42.0, 43.0);
         static::assertSame(42.0, $position->latitude);
